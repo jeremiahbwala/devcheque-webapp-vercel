@@ -1,0 +1,259 @@
+/* =====================================================
+   TESTIMONIALS
+===================================================== */
+
+/* Section */
+.testimonial-section {
+  background-color: #ccffcd;
+  margin-bottom: 50px;
+}
+
+/* Cards */
+.cards {
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Avatars */
+.testimonial-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Responsive: Testimonials ---------- */
+@media (max-width: 768px) {
+  .card-grid {
+    flex-direction: column !important;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .card-grid .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card-grid img {
+    height: 300px;
+  }
+
+  .card-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-grid img {
+    height: 250px;
+    border-radius: 1rem;
+  }
+}
+
+/* =====================================================
+   HOW WE WORK
+===================================================== */
+
+/* Section */
+.work-section {
+  padding: 5rem 2rem;
+  background-color: #fafafa;
+}
+
+.work-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Title */
+.work-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 5rem;
+  letter-spacing: -0.02em;
+}
+
+/* Timeline */
+.timeline-wrapper {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #1a1a1a;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timeline-trophy {
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  z-index: 3;
+}
+
+/* Steps Grid */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Step Card */
+.step-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+/* Timeline connector */
+.step-card::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 3rem;
+  background-color: #1a1a1a;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Position modifiers */
+.step-card.row-1 {
+  margin-bottom: 1rem;
+}
+
+.step-card.row-1::before {
+  bottom: -4rem;
+}
+
+.step-card.row-2 {
+  margin-top: 4rem;
+}
+
+.step-card.row-2::before {
+  top: -4rem;
+  margin-right: 1rem;
+}
+
+/* Step Content */
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.step-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+.step-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.step-description {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Responsive: How We Work ---------- */
+
+@media (max-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step-card:nth-child(3),
+  .step-card:nth-child(6) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-section {
+    padding: 3rem 1rem;
+  }
+
+  .work-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .timeline-line,
+  .timeline-trophy {
+    display: none;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .step-card {
+    margin: 0 !important;
+    padding: 1.5rem;
+  }
+
+  .step-card::before {
+    display: none;
+  }
+
+  .step-card:nth-child(3),
+  .step-card:nth-child(6) {
+    max-width: 100%;
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+  }
+
+  .step-description {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .work-title {
+    font-size: 2rem;
+  }
+
+  .step-card {
+    padding: 1.25rem;
+  }
+}
