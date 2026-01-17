@@ -166,73 +166,73 @@ function Testimonials() {
       </section>
 
       {/* How Development Works */}
-      <section id='work' class="work-section bg-white">
-        <div class="work-container">
-          <h2 class="work-title">How we work</h2>
+      <section id='work' className="work-section bg-white">
+        <div className="work-container">
+          <h2 className="work-title">How we work</h2>
 
-          <div class="timeline-wrapper">
-            <div class="timeline-line"></div>
-            <div class="timeline-trophy">🏆</div>
+          <div className="timeline-wrapper">
+            <div className="timeline-line"></div>
+            <div className="timeline-trophy">🏆</div>
 
-            <div class="steps-grid">
+            <div className="steps-grid">
               {/*- Row 1 - Steps 1, 3, 5 -->*/}
-              <div class="step-card row-1">
-                <div class="step-header">
-                  <span class="step-number">#1</span>
-                  <h3 class="step-title">Discovery & Alignment</h3>
+              <div className="step-card row-1">
+                <div className="step-header">
+                  <span className="step-number">#1</span>
+                  <h3 className="step-title">Discovery & Alignment</h3>
                 </div>
-                <p class="step-description">
+                <p className="step-description">
                   We start by understanding your goals, challenges, and vision. This helps us define a clear direction for the project.
                 </p>
               </div>
 
-              <div class="step-card row-1">
-                <div class="step-header">
-                  <span class="step-number">#3</span>
-                  <h3 class="step-title">Development & Build</h3>
+              <div className="step-card row-1">
+                <div className="step-header">
+                  <span className="step-number">#3</span>
+                  <h3 className="step-title">Development & Build</h3>
                 </div>
-                <p class="step-description">
+                <p className="step-description">
                   We turn the designs into fast, reliable, and scalable digital products using modern technologies.
                 </p>
               </div>
 
-              <div class="step-card row-1">
-                <div class="step-header">
-                  <span class="step-number">#5</span>
-                  <h3 class="step-title">Quality Assurance & Refinement</h3>
+              <div className="step-card row-1">
+                <div className="step-header">
+                  <span className="step-number">#5</span>
+                  <h3 className="step-title">Quality Assurance & Refinement</h3>
                 </div>
-                <p class="step-description">
+                <p className="step-description">
                   We rigorously test the product across devices, browsers, and screen sizes.
                 </p>
               </div>
 
               {/*} Row 2 - Steps 2, 4, 6 -->*/}
-              <div class="step-card row-2">
-                <div class="step-header">
-                  <span class="step-number">#2</span>
-                  <h3 class="step-title">Design Sprint</h3>
+              <div className="step-card row-2">
+                <div className="step-header">
+                  <span className="step-number">#2</span>
+                  <h3 className="step-title">Design Sprint</h3>
                 </div>
-                <p class="step-description">
+                <p className="step-description">
                   We design high-fidelity layouts, interfaces, and interactions in focused 3–5-day cycles
                 </p>
               </div>
 
-              <div class="step-card row-2">
-                <div class="step-header">
-                  <span class="step-number">#4</span>
-                  <h3 class="step-title">Deploy</h3>
+              <div className="step-card row-2">
+                <div className="step-header">
+                  <span className="step-number">#4</span>
+                  <h3 className="step-title">Deploy</h3>
                 </div>
-                <p class="step-description">
+                <p className="step-description">
                   After testing and final refinements, we launch your product and ensure everything works perfectly.
                 </p>
               </div>
 
-              <div class="step-card row-2">
-                <div class="step-header">
-                  <span class="step-number">#6</span>
-                  <h3 class="step-title">Launch & Handover</h3>
+              <div className="step-card row-2">
+                <div className="step-header">
+                  <span className="step-number">#6</span>
+                  <h3 className="step-title">Launch & Handover</h3>
                 </div>
-                <p class="step-description">
+                <p className="step-description">
                   We prepare the product for deployment, finalize all configurations, and ensure everything works in the live environment
                 </p>
               </div>

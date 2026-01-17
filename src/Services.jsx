@@ -9,19 +9,19 @@ import { Code, Smartphone } from "lucide-react";
 
 function Services() {
     return (
-      <section id="services" class="font-archivo service-section">
-  <div class="container">
-    <h2 class="text-center fw-bold font-archivo">Our Services</h2>
-    <p class="text-center text-black font-archivo">
+      <section id="services" className="font-archivo service-section">
+  <div className="container">
+    <h2 className="text-center fw-bold font-archivo">Our Services</h2>
+    <p className="text-center text-black font-archivo">
       Comprehensive digital solutions tailored to bring your vision to life
     </p>
 
-    <hr class="service-divider"/>
+    <hr className="service-divider"/>
 
-    <div class="services-grid">
+    <div className="services-grid">
       {/*-- UI/UX Design */}
-      <div class="service-item">
-        <div class="service-icon">
+      <div className="service-item">
+        <div className="service-icon">
           <img
             src={UIImg}
             alt="vector"
@@ -33,15 +33,15 @@ function Services() {
             }}
           />
         </div>
-        <h3 class="font-archivo">UI/UX Design</h3>
-        <p class="font-archivo">
+        <h3 className="font-archivo">UI/UX Design</h3>
+        <p className="font-archivo">
           We design intuitive, visually striking interfaces rooted in user research, smart wireframes, and polished prototypes, all crafted to delight users and strengthen your brand.
         </p>
       </div>
 
       {/*- Mobile Apps */}
-      <div class="service-item">
-        <div class="service-icon">
+      <div className="service-item">
+        <div className="service-icon">
           <img
             src={MobileImg}
             alt="vector"
@@ -53,15 +53,15 @@ function Services() {
             }}
           />
         </div>
-        <h3 class="font-archivo">Mobile Apps</h3>
-        <p class="font-archivo">
+        <h3 className="font-archivo">Mobile Apps</h3>
+        <p className="font-archivo">
           We build fast, user friendly native and cross-platform apps that deliver seamless experiences across iOS and Android.
         </p>
       </div>
 
       {/*- Branding */}
-      <div class="service-item">
-        <div class="service-icon">
+      <div className="service-item">
+        <div className="service-icon">
           <img
             src={MobileImg}
             alt="vector"
@@ -73,15 +73,15 @@ function Services() {
             }}
           />
         </div>
-        <h3 class="font-archivo">Branding</h3>
-        <p class="font-archivo">
+        <h3 className="font-archivo">Branding</h3>
+        <p className="font-archivo">
           We create cohesive brand identities, from logos to full guidelines, that help you stand out and connect with your audience.
         </p>
       </div>
 
       {/*-- Web Development */}
-      <div class="service-item">
-        <div class="services-icon">
+      <div className="service-item">
+        <div className="services-icon">
           <img
             src={WebImg}
             alt="vector"
@@ -93,8 +93,8 @@ function Services() {
             }}
           />
         </div>
-        <h3 class="font-archivo">Web Development</h3>
-        <p class="font-archivo">
+        <h3 className="font-archivo">Web Development</h3>
+        <p className="font-archivo">
           We build fast, scalable, and secure websites from landing pages to full web apps optimized for performance.
         </p>
       </div>
