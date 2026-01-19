@@ -1,47 +1,19 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Footer/footer.css';
+import FooterImage from './assets/footer.jpeg';
 
 function Footer() {
   return (
     <>
-      <style>{`
-        .footer-bg {
-          background-color: #1a1a1a;
-        }
-        .hover-link {
-          transition: opacity 0.3s;
-        }
-        .hover-link:hover {
-          opacity: 0.7;
-        }
-        .social-icon {
-          width: 20px;
-          height: 20px;
-        }
-        .subscribe-input {
-          background-color: #2d2d2d !important;
-          border: none !important;
-          color: white !important;
-        }
-        .subscribe-input::placeholder {
-          color: #999 !important;
-        }
-        .subscribe-input:focus {
-          background-color: #2d2d2d !important;
-          color: white !important;
-          box-shadow: none !important;
-        }
-        .send-btn {
-          background-color: #28a745 !important;
-          border: none !important;
-          padding: 0.5rem 1.5rem;
-        }
-        .send-btn:hover {
-          background-color: #218838 !important;
-        }
-      `}</style>
-      
-      <footer className="footer-bg text-white py-5">
+      <footer className="position-relative text-white overflow-hidden"
+        style={{ 
+          backgroundImage: `url('${FooterImage}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          paddingTop: '100px'
+        }}>
         <div className="container">
           <div className="row">
             
