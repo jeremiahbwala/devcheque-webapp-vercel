@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Team/team.css';
 import './index.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import BolajiImage from './assets/team/Bolaji.jpeg';
 import OlutadeImage from './assets/team/Olutade.jpeg';
@@ -80,15 +80,6 @@ function Team() {
   const CARD_WIDTH = 360;
   const VISIBLE_CARDS = 3;
   const MAX_INDEX = teamMembers.length - VISIBLE_CARDS;
-
-  // Auto slide
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev >= MAX_INDEX ? 0 : prev + 1));

@@ -114,14 +114,14 @@ function DevChequeWebsite() {
           </div>
         </div>
         <div className="hero-image-wrapper">
-  <img src={heroImage} alt="Hero" className="hero-image" />
-</div>
+         <img src={heroImage} alt="Hero" className="hero-image" />
+        </div>
 
       </section>
 
 
       {/* Stats Section */}
-<section className="stat-section">
+      <section className="stat-section">
   <div className="stats-wrapper">
     <img src={statsImg} alt="stats" className="stats-image" />
   </div>
