@@ -2,8 +2,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Contact Form/contact.css';
 import React, { useState } from 'react';
 import { API_ENDPOINTS, buildHeaders, logApiCall } from './config/api';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 function ContactForm() {
+  const [budgetRange, setBudgetRange] = useState([5000, 25000]);
+
+  const handleBudgetChange = (value) => {
+    setBudgetRange(value);
+  };
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -51,7 +59,7 @@ function ContactForm() {
         message: formData.message,
         company: formData.company,
         project_type: formData.projectTypes.join(", "),
-        budget_range: `$${formData.budget.toLocaleString()}`,
+        budget_range: `$${budgetRange[0].toLocaleString()} - $${budgetRange[1].toLocaleString()}`,
         honeypot: formData.honeypot
       };
 
@@ -121,6 +129,7 @@ function ContactForm() {
         budget: 5000,
         honeypot: ''
       });
+      setBudgetRange([5000, 25000]);
 
       console.log("✅ Form cleared successfully!");
 
@@ -230,7 +239,7 @@ function ContactForm() {
               </div>
             </div>
 
-            {/* Budget */}
+            {/* Budget - UPDATED SECTION */}
             <div className="form-field">
               <label className="form-label-custom font-archivo">
                 Project Budget
@@ -238,21 +247,39 @@ function ContactForm() {
               <p className='font-archivo' style={{ fontSize: '14px', color: '#666', marginBottom: '8px' }}>
                 Slide to indicate your budget range
               </p>
-              <input
-                type="range"
-                className="budget-slider"
-                min="5000"
-                max="25000"
-                step="1000"
-                value={formData.budget}
-                onChange={(e) => setFormData({ ...formData, budget: parseInt(e.target.value) })}
-                style={{
-                  background: `linear-gradient(to right, #7cb342 0%, #7cb342 ${((formData.budget - 5000) / (25000 - 5000)) * 100}%, #424242 ${((formData.budget - 5000) / (25000 - 5000)) * 100}%, #424242 100%)`
-                }}
-              />
+              <div style={{ padding: '20px 10px' }}>
+                <Slider
+                  range
+                  min={5000}
+                  max={25000}
+                  step={1000}
+                  value={budgetRange}
+                  onChange={handleBudgetChange}
+                  trackStyle={[{ backgroundColor: '#7cb342', height: 6 }]}
+                  handleStyle={[
+                    { 
+                      backgroundColor: '#7cb342', 
+                      borderColor: '#7cb342',
+                      height: 20,
+                      width: 20,
+                      marginTop: -7,
+                      boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                    },
+                    { 
+                      backgroundColor: '#7cb342', 
+                      borderColor: '#7cb342',
+                      height: 20,
+                      width: 20,
+                      marginTop: -7,
+                      boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                    }
+                  ]}
+                  railStyle={{ backgroundColor: '#424242', height: 6 }}
+                />
+              </div>
               <div className="budget-labels">
-                <span className='font-archivo'>${formData.budget.toLocaleString()}</span>
-                <span className='font-archivo'>$25000</span>
+                <span className='font-archivo'>${budgetRange[0].toLocaleString()}</span>
+                <span className='font-archivo'>${budgetRange[1].toLocaleString()}</span>
               </div>
             </div>
 
