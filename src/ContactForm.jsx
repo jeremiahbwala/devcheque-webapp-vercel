@@ -251,7 +251,7 @@ function ContactForm() {
                 <Slider
                   range
                   min={5000}
-                  max={25000}
+                  max={500000}
                   step={1000}
                   value={budgetRange}
                   onChange={handleBudgetChange}
