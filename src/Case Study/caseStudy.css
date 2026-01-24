@@ -128,7 +128,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
-  max-width: 880px;   /* important */
+  max-width: 860px;   /* important */
   background: #fff;
   border-radius: 1rem;
   padding: 1.5rem;

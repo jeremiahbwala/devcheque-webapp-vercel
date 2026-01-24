@@ -239,50 +239,73 @@ function ContactForm() {
               </div>
             </div>
 
-            {/* Budget - UPDATED SECTION */}
-            <div className="form-field">
-              <label className="form-label-custom font-archivo">
-                Project Budget
-              </label>
-              <p className='font-archivo' style={{ fontSize: '14px', color: '#666', marginBottom: '8px' }}>
-                Slide to indicate your budget range
-              </p>
-              <div style={{ padding: '20px 10px' }}>
-                <Slider
-                  range
-                  min={5000}
-                  max={500000}
-                  step={1000}
-                  value={budgetRange}
-                  onChange={handleBudgetChange}
-                  trackStyle={[{ backgroundColor: '#7cb342', height: 6 }]}
-                  handleStyle={[
-                    { 
-                      backgroundColor: '#7cb342', 
-                      borderColor: '#7cb342',
-                      height: 20,
-                      width: 20,
-                      marginTop: -7,
-                      boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
-                    },
-                    { 
-                      backgroundColor: '#7cb342', 
-                      borderColor: '#7cb342',
-                      height: 20,
-                      width: 20,
-                      marginTop: -7,
-                      boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
-                    }
-                  ]}
-                  railStyle={{ backgroundColor: '#424242', height: 6 }}
-                />
-              </div>
-              <div className="budget-labels">
-                <span className='font-archivo'>${budgetRange[0].toLocaleString()}</span>
-                <span className='font-archivo'>${budgetRange[1].toLocaleString()}</span>
+           {/* Budget - UPDATED SECTION WITH FLOATING LABELS */}
+          <div className="form-field">
+            <label className="form-label-custom font-archivo">
+              Project Budget
+            </label>
+            <p className='font-archivo' style={{ fontSize: '14px', color: '#666', marginBottom: '8px' }}>
+              Slide to indicate your budget range
+            </p>
+            <div style={{ padding: '20px 10px 40px 10px', position: 'relative' }}>
+              <Slider
+                range
+                min={5000}
+                max={100000}
+                step={1000}
+                value={budgetRange}
+                onChange={handleBudgetChange}
+                trackStyle={[{ backgroundColor: '#7cb342', height: 6 }]}
+                handleStyle={[
+                  { 
+                    backgroundColor: '#7cb342', 
+                    borderColor: '#7cb342',
+                    height: 20,
+                    width: 20,
+                    marginTop: -7,
+                    boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                  },
+                  { 
+                    backgroundColor: '#7cb342', 
+                    borderColor: '#7cb342',
+                    height: 20,
+                    width: 20,
+                    marginTop: -7,
+                    boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                  }
+                ]}
+                railStyle={{ backgroundColor: '#424242', height: 6 }}
+              />
+    
+              {/* Dynamic labels that follow the handles */}
+              <div style={{ position: 'relative', marginTop: '10px' }}>
+                <span 
+                  className='font-archivo' 
+                  style={{ 
+                    position: 'absolute', 
+                    left: `${((budgetRange[0] - 5000) / (100000 - 5000)) * 100}%`,
+                    transform: 'translateX(-50%)',
+                    fontWeight: '600',
+                    fontSize: '14px'
+                  }}
+                >
+                  ${budgetRange[0].toLocaleString()}
+                </span>
+                <span 
+                  className='font-archivo' 
+                  style={{ 
+                    position: 'absolute', 
+                    left: `${((budgetRange[1] - 5000) / (100000 - 5000)) * 100}%`,
+                    transform: 'translateX(-50%)',
+                    fontWeight: '600',
+                    fontSize: '14px'
+                  }}
+                >
+                  ${budgetRange[1].toLocaleString()}
+                </span>
               </div>
             </div>
-
+          </div>
             {/* Message */}
             <div className="form-message-field">
               <label className="form-label-custom font-archivo">
