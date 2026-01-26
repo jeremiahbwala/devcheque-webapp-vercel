@@ -7,6 +7,8 @@ import 'rc-slider/assets/index.css';
 
 function ContactForm() {
   const [budgetRange, setBudgetRange] = useState([5000, 25000]);
+  const [showOthersDropdown, setShowOthersDropdown] = useState(false);
+  const [selectedOtherType, setSelectedOtherType] = useState('');
 
   const handleBudgetChange = (value) => {
     setBudgetRange(value);
@@ -33,7 +35,31 @@ function ContactForm() {
       const updatedTypes = isSelected
         ? prev.projectTypes.filter(t => t !== type)
         : [...prev.projectTypes, type];
+
+        if (type === "Others" && isSelected) {
+          setShowOthersDropdown(false);
+          setSelectedOtherType('');
+        } else if (type === "Others" && !isSelected) {
+          setShowOthersDropdown(true);
+        }
       return { ...prev, projectTypes: updatedTypes };
+    });
+  };
+
+  //Handlers for dropdown selection
+  const handleOtherTypeSelect = (e) => {
+    const value = e.target.value;
+    setSelectedOtherType(value);
+
+    //update formdata to include the specific "others" type
+    setFormData(prev => {
+      const filtered = prev.projectTypes.filter(t =>
+        t !== "Others" && !t.startsWith("Others:")
+        );
+        if (value) {
+          return { ...prev, projectTypes: [...filtered, "Others", `Others: ${value}`] };
+        }
+        return { ...prev, projectTypes: [...filtered, "Others"] };
     });
   };
 
@@ -219,25 +245,53 @@ function ContactForm() {
             </div>
 
             {/* Project Type */}
-            <div className="form-field">
-              <label className="form-label-custom font-archivo">
-                Project Type 
-              </label>
-              <div className="checkbox-grid font-archivo">
-                {["Web Design", "Branding", "Mobile App Design", "Others"].map((type) => (
-                  <div className="checkbox-item" key={type}>
-                    <input
-                      type="checkbox"
-                      className="checkbox-custom font-archivo"
-                      checked={formData.projectTypes.includes(type)}
-                      onChange={() => handleProjectTypeToggle(type)}
-                      id={type}
-                    />
-                    <label className="checkbox-label" htmlFor={type}>{type}</label>
-                  </div>
-                ))}
-              </div>
-            </div>
+<div className="form-field">
+  <label className="form-label-custom font-archivo">
+    Project Type 
+  </label>
+  <div className="checkbox-grid font-archivo">
+    {["Web Design", "Branding", "Mobile App Design", "Others"].map((type) => (
+      <div key={type}>
+        <div className="checkbox-item">
+          <input
+            type="checkbox"
+            className="checkbox-custom font-archivo"
+            checked={formData.projectTypes.includes(type)}
+            onChange={() => handleProjectTypeToggle(type)}
+            id={type}
+          />
+          <label className="checkbox-label" htmlFor={type}>{type}</label>
+        </div>
+        
+        {/* Dropdown that appears when "Others" is checked */}
+        {type === "Others" && showOthersDropdown && (
+          <div style={{ marginLeft: '30px', marginTop: '10px' }}>
+            <select 
+              className="input-custom font-archivo"
+              value={selectedOtherType}
+              onChange={handleOtherTypeSelect}
+              style={{ 
+                width: '100%', 
+                padding: '8px 12px',
+                borderRadius: '8px',
+                border: '1px solid #ccc'
+              }}
+            >
+              <option value="">Select project type...</option>
+              <option value="E-commerce">E-commerce</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Logo Design">Logo Design</option>
+              <option value="Social Media Graphics">Social Media Graphics</option>
+              <option value="SEO Services">SEO Services</option>
+              <option value="Content Writing">Content Writing</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+            </select>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
 
            {/* Budget - UPDATED SECTION WITH FLOATING LABELS */}
           <div className="form-field">

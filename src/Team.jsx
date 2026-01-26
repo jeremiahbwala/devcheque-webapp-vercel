@@ -128,18 +128,24 @@ function Team() {
       {/* TEAM SECTION */}
       <section className="team-section">
         <div className="team-container">
-          <h3 className="team-title">Meet The Team</h3>
-          <p className="team-subtitle">
-            Experienced professionals dedicated to building quality products
-          </p>
+          <div className="team-header">
+            {/* LEFT ARROW */}
+            <button className="slider-arrow left" onClick={handlePrev}>
+              &#10094;
+            </button>
 
-          {/* ARROWS */}
-          <button className="slider-arrow left" onClick={handlePrev}>
-            &#10094;
-          </button>
-          <button className="slider-arrow right" onClick={handleNext}>
-            &#10095;
-          </button>
+            <div className="team-header-center">
+              <h3 className="team-title">Meet The Team</h3>
+              <p className="team-subtitle">
+                Experienced professionals dedicated to building quality products
+              </p>
+            </div>
+
+            {/* RIGHT ARROW */}
+            <button className="slider-arrow right" onClick={handleNext}>
+              &#10095;
+            </button>
+          </div>
 
           {/* SLIDER */}
           <div className="slider-wrapper">
