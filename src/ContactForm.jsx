@@ -313,7 +313,7 @@ function ContactForm() {
                 handleStyle={[
                   { 
                     backgroundColor: '#7cb342', 
-                    borderColor: '#7cb342',
+                    border: '4px solid #424242',
                     height: 20,
                     width: 20,
                     marginTop: -7,
@@ -321,7 +321,7 @@ function ContactForm() {
                   },
                   { 
                     backgroundColor: '#7cb342', 
-                    borderColor: '#7cb342',
+                    border: '4px solid #424242',
                     height: 20,
                     width: 20,
                     marginTop: -7,
