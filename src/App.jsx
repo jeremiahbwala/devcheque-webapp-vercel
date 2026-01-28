@@ -25,10 +25,10 @@ function DevChequeWebsite() {
 
             {/* Desktop Menu */}
             <div className="d-none d-lg-flex gap-4 align-items-center mx-auto font-archivo">
-              <a href="#about" className="text-dark text-decoration-none fw-bold fs-5 font-archivo">About us</a>
-              <a href="#projects" className="text-dark text-decoration-none fw-bold fs-5 font-archivo">Projects</a>
-              <a href="#services" className="text-dark text-decoration-none fw-bold fs-5 font-archivo">Services</a>
-              <a href="#work" className="text-dark text-decoration-none fw-bold fs-5 font-archivo">How we work</a>
+              <a href="#about" className="text-center text-dark text-decoration-none fw-bold fs-5 font-archivo">About us</a>
+              <a href="#projects" className="text-center text-dark text-decoration-none fw-bold fs-5 font-archivo">Projects</a>
+              <a href="#services" className="text-center text-dark text-decoration-none fw-bold fs-5 font-archivo">Services</a>
+              <a href="#work" className="text-center text-dark text-decoration-none fw-bold fs-5 font-archivo">How we work</a>
             </div>
 
             {/* CTA Button Desktop */}
@@ -85,7 +85,7 @@ function DevChequeWebsite() {
               <span className="font-archivo">Get Your </span>
               <span className="font-archivo">Product Launched</span>
               <span className="font-archivo"> in </span>
-              <span className="font-archivo">Weeeks</span>
+              <span className="font-archivo">Weeks</span>
             </h1>
 
             {/* Description */}

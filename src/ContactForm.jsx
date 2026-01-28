@@ -6,7 +6,7 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 function ContactForm() {
-  const [budgetRange, setBudgetRange] = useState([5000, 25000]);
+  const [budgetRange, setBudgetRange] = useState([10, 100000]);
   const [showOthersDropdown, setShowOthersDropdown] = useState(false);
   const [selectedOtherType, setSelectedOtherType] = useState('');
 
@@ -20,7 +20,7 @@ function ContactForm() {
     message: '',
     company: '',
     projectTypes: [],
-    budget: 5000,
+    budget: 100,
     honeypot: ''
   });
 
@@ -152,10 +152,10 @@ function ContactForm() {
         message: '',
         company: '',
         projectTypes: [],
-        budget: 5000,
+        budget: 100,
         honeypot: ''
       });
-      setBudgetRange([5000, 25000]);
+      setBudgetRange([100, 100000]);
 
       console.log("✅ Form cleared successfully!");
 
@@ -304,7 +304,7 @@ function ContactForm() {
             <div style={{ padding: '20px 10px 40px 10px', position: 'relative' }}>
               <Slider
                 range
-                min={5000}
+                min={100}
                 max={100000}
                 step={1000}
                 value={budgetRange}
@@ -337,7 +337,7 @@ function ContactForm() {
                   className='font-archivo' 
                   style={{ 
                     position: 'absolute', 
-                    left: `${((budgetRange[0] - 5000) / (100000 - 5000)) * 100}%`,
+                    left: `${((budgetRange[0] - 100) / (100000 - 100)) * 100}%`,
                     transform: 'translateX(-50%)',
                     fontWeight: '600',
                     fontSize: '14px'
@@ -349,7 +349,7 @@ function ContactForm() {
                   className='font-archivo' 
                   style={{ 
                     position: 'absolute', 
-                    left: `${((budgetRange[1] - 5000) / (100000 - 5000)) * 100}%`,
+                    left: `${((budgetRange[1] - 100) / (100000 - 100)) * 100}%`,
                     transform: 'translateX(-50%)',
                     fontWeight: '600',
                     fontSize: '14px'

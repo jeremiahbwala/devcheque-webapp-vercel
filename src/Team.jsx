@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Team/team.css';
 import './index.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import BolajiImage from './assets/team/Bolaji.jpeg';
 import OlutadeImage from './assets/team/Olutade.jpeg';
@@ -78,16 +78,59 @@ function Team() {
   ];
 
   const CARD_WIDTH = 360;
-  const VISIBLE_CARDS = 3;
-  const MAX_INDEX = teamMembers.length - VISIBLE_CARDS;
+
+  // Duplicate team members enough times for smooth infinite scrolling
+  const infiniteTeamMembers = [
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers,
+    ...teamMembers
+  ];
+
+  // Start from the middle set on initial load
+  useEffect(() => {
+    setCurrentIndex(teamMembers.length * 2);
+  }, []);
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev >= MAX_INDEX ? 0 : prev + 1));
+    setCurrentIndex((prev) => prev + 1);
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev <= 0 ? MAX_INDEX : prev - 1));
+    setCurrentIndex((prev) => prev - 1);
   };
+
+  // Reset position seamlessly when user gets too far in either direction
+  useEffect(() => {
+    if (currentIndex >= teamMembers.length * 16) {
+      const timer = setTimeout(() => {
+        setCurrentIndex(teamMembers.length * 2);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+    if (currentIndex < teamMembers.length * 2) {
+      const timer = setTimeout(() => {
+        setCurrentIndex(teamMembers.length * 16 - 1);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex, teamMembers.length]);
 
   return (
     <>
@@ -155,7 +198,7 @@ function Team() {
                 transform: `translateX(-${currentIndex * CARD_WIDTH}px)`
               }}
             >
-              {teamMembers.map((member, index) => (
+              {infiniteTeamMembers.map((member, index) => (
                 <div className="team-card" key={index}>
                   <img src={member.image} alt={member.name} />
 
