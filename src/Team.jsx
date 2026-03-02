@@ -12,7 +12,6 @@ import AboutImage from './assets/About.jpeg';
 import SeunImg from './assets/Seun.jpeg';
 
 function Team() {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const teamMembers = [
     {
@@ -77,6 +76,8 @@ function Team() {
     }
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(teamMembers.length * 2);
+
   const CARD_WIDTH = 360;
 
   // Duplicate team members enough times for smooth infinite scrolling
@@ -103,10 +104,6 @@ function Team() {
     ...teamMembers
   ];
 
-  // Start from the middle set on initial load
-  useEffect(() => {
-    setCurrentIndex(teamMembers.length * 2);
-  }, []);
 
   const handleNext = () => {
     setCurrentIndex((prev) => prev + 1);

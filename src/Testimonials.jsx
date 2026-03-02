@@ -8,38 +8,7 @@ import vector from './assets/Vector.png';
 
 
 function Testimonials() {
-  const steps = [
-    {
-      num: '#1',
-      title: 'Discovery & Alignment',
-      description: 'We start by understanding your goals, challenges, and vision. This helps us define a clear direction for the project.'
-    },
-    {
-      num: '#3',
-      title: 'Development & Build',
-      description: 'We turn the designs into fast, reliable, and scalable digital products using modern technologies.'
-    },
-    {
-      num: '#5',
-      title: 'Quality Assurance & Refinement',
-      description: 'We rigorously test the product across devices, browsers, and screen sizes.'
-    },
-    {
-      num: '#2',
-      title: 'Design Sprint',
-      description: 'We design high-fidelity layouts, interfaces, and interactions in focused 3-5 day cycles'
-    },
-    {
-      num: '#4',
-      title: 'Deploy',
-      description: 'After testing and final refinements, we launch your product and ensure everything works perfectly.'
-    },
-    {
-      num: '#6',
-      title: 'Launch & Handover',
-      description: 'We prepare the product for deployment, finalize all configurations, and ensure everything works in the live environment'
-    }
-  ];
+  
   return (
     <>
       {/* Testimonials */}

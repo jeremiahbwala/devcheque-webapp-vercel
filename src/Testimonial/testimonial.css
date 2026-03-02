@@ -193,68 +193,55 @@
 
 /* ---------- Responsive: How We Work ---------- */
 
-@media (max-width: 1024px) {
-  .steps-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .step-card:nth-child(3),
-  .step-card:nth-child(6) {
-    grid-column: 1 / -1;
-    max-width: 50%;
-    margin: 0 auto;
-  }
-}
-
 @media (max-width: 768px) {
   .work-section {
     padding: 3rem 1rem;
   }
 
   .work-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
   }
 
+  /* hide desktop timeline */
   .timeline-line,
   .timeline-trophy {
     display: none;
   }
 
+  /* stack cards cleanly */
   .steps-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
+    padding: 0;
   }
 
-  .step-card {
+  /* reset ALL desktop offsets */
+  .step-card,
+  .step-card.row-1,
+  .step-card.row-2 {
     margin: 0 !important;
-    padding: 1.5rem;
+    transform: none !important;
   }
 
+  /* remove connector lines */
   .step-card::before {
     display: none;
   }
 
-  .step-card:nth-child(3),
-  .step-card:nth-child(6) {
-    max-width: 100%;
+  /* improve spacing */
+  .step-card {
+    padding: 1.4rem;
+    border-radius: 0.75rem;
   }
 
   .step-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .step-description {
-    font-size: 0.9375rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .work-title {
-    font-size: 2rem;
-  }
-
-  .step-card {
-    padding: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
