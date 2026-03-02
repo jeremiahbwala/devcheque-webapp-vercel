@@ -9,48 +9,7 @@ import caseStudy2 from './assets/casestudy2.jpg';
 import caseStudy3 from './assets/casestudy3.jpg';
 
 function CaseStudy() {
-  // All your case study data in ONE place
-  const caseStudies = [
-    {
-      id: 1,
-      image: caseStudy2,
-      title: 'App Design For Firefit',
-      description: 'FitTrack was created to simplify digital coaching for fast-growing fitness communities. We transformed their traditional WhatsApp and spreadsheet workflow into a seamless mobile experience. With a cross-platform app built around real user need. coaches can onboard clients, track progress, manage plans, and improve accountability. Firefit delivers reliable performance, personalized training and a smooth experience from start to finish',
-      alignment: 'start' // For alternating layout
-    },
-    {
-      id: 2,
-      image: caseStudy3,
-      title: 'E-Commerce Platform Redesign',
-      description: 'FitTrack was created to simplify digital coaching for fast-growing fitness communities. We transformed their traditional WhatsApp and spreadsheet workflow into a seamless mobile experience. With a cross-platform app built around real user need. coaches can onboard clients, track progress, manage plans, and improve accountability. Firefit delivers reliable performance, personalized training and a smooth experience from start to finish',
-      alignment: 'end' // For alternating layout
-    },
-    {
-      id: 3,
-      image: caseStudy1,
-      title: 'Fintech Mobile App',
-      description: 'FitTrack was created to simplify digital coaching for fast-growing fitness communities. We transformed their traditional WhatsApp and spreadsheet workflow into a seamless mobile experience. With a cross-platform app built around real user need. coaches can onboard clients, track progress, manage plans, and improve accountability. Firefit delivers reliable performance, personalized training and a smooth experience from start to finish',
-      alignment: 'start' // For alternating layout
-    }
-  ];
-  const benefits = [
-    {
-      icon: '🚀',
-      title: 'Launch in Weeks, Not Months',
-      description: 'We handle everything from branding, design, frontend, backend, deployment. No multiple vendors, no handoff gaps. One team, one point of contact, seamless execution from concept to launch.'
-    },
-    {
-      icon: '🤝',
-      title: 'Full-Stack Experience',
-      description: 'We handle everything from branding, design, frontend, backend, deployment. No multiple vendors, no handoff gaps. One team, one point of contact, seamless execution from concept to launch.'
-    },
-    {
-      icon: '📊',
-      title: 'Result Oriented',
-      description: 'We handle everything from branding, design, frontend, backend, deployment. No multiple vendors, no handoff gaps. One team, one point of contact, seamless execution from concept to launch.'
-    }
-  ];
-
+  
   return (
     <>
       <section id="projects" className="case-section py-5 bg-white">
