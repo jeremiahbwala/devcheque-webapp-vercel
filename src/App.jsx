@@ -14,7 +14,7 @@ function DevChequeWebsite() {
   return (
     <div>
       {/* Navigation */}
-      <nav className="navbar navbar-expand-lg bg-white shadow-sm py-3">
+      <nav className="navbar navbar-expand-lg bg-white shadow-sm py-3 fixed-top">
         <div className="container-fluid px-4">
           <div className="d-flex justify-content-between align-items-center w-100">
             
