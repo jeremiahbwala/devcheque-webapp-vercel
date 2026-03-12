@@ -21,7 +21,7 @@
 
 /* Slider */
 .slider-container { position: relative; }
-.slider-wrapper { overflow: hidden; }
+.slider-wrapper { overflow: hidden; touch-action: pan-x;}
 .team-slider { display: flex; gap: 20px; transition: transform 0.5s ease-in-out; }
 .team-card { min-width: 340px; background:#fff; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.08); overflow:hidden; }
 .team-card img { width:100%; height:260px; object-fit:cover; }
@@ -42,4 +42,5 @@
 @media(max-width:768px){
   .team-card{ min-width:280px; }
   /* Arrows stay on the sides */
+  .slider-wrapper{ touch-action: pan-x;}
 }

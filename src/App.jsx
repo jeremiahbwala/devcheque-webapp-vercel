@@ -122,11 +122,10 @@ function DevChequeWebsite() {
 
       {/* Stats Section */}
       <section className="stat-section">
-  <div className="stats-wrapper">
-    <img src={statsImg} alt="stats" className="stats-image" />
-  </div>
-</section>
-
+        <div className="stats-wrapper">
+          <img src={statsImg} alt="stats" className="stats-image" />
+        </div>
+      </section>
     </div>
   );
 }

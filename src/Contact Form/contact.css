@@ -10,14 +10,14 @@
   }
 
   .form-name-card {
-    border-radius: 24px;
+    border-radius: 20px;
     padding: 40px;
   }
 
   .form-name-field {
     background: white;
     border: 2px;
-    border-top-left-radius: 70px;
+    border-top-left-radius: 60px;
     padding: 24px;
     margin-bottom: 20px;
   }
@@ -25,7 +25,7 @@
   .form-email-field {
     background: white;
     border: 2px;
-    border-top-right-radius: 70px;
+    border-top-right-radius: 60px;
     padding: 24px;
     margin-bottom: 20px;
   }
