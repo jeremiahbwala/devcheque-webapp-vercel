@@ -74,7 +74,6 @@
 
 .team-card { 
   min-width: 340px; 
-  flex-shrink: 0; /* prevents card resizing */
   background:#fff; 
   border-radius:16px; 
   box-shadow:0 10px 25px rgba(0,0,0,0.08); 
@@ -84,7 +83,7 @@
 .team-card img { 
   width:100%; 
   height:260px; 
-  object-fit:cover; 
+  object-fit:contain; 
 }
 
 .card-content { 
