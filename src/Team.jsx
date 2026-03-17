@@ -78,7 +78,7 @@ function Team() {
 
   const [currentIndex, setCurrentIndex] = useState(teamMembers.length * 2);
 
-  const CARD_WIDTH = 360;
+  const CARD_WIDTH = 320;
 
   // Duplicate team members enough times for smooth infinite scrolling
   const infiniteTeamMembers = [

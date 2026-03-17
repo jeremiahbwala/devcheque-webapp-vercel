@@ -97,7 +97,7 @@ function DevChequeWebsite() {
             {/* CTA Buttons */}
             <div className="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
               <button 
-                className="btn hero-button hero-btn1 btn-lg px-5 rounded-pill d-inline-flex align-items-center justify-content-center"
+                className="btn hero-button hero-btn1 btn-lg px-5 bg-success rounded-pill d-inline-flex align-items-center justify-content-center"
                 style={{ fontSize: '16px',  fontWeight: '500' }}
               >
                 <a href="#contactForm" className='text-white text-decoration-none font-archivo'>Start Your Project</a>

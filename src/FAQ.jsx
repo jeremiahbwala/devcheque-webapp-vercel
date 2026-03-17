@@ -3,8 +3,8 @@ import './FAQ/FAQ.css'
 import React, { useState } from 'react';
 
 function FAQ() {
-  const [openFaq, setOpenFaq] = useState(0);
-
+ const [openFaq, setOpenFaq] = useState(null);
+ 
   const faqs = [
     { 
       q: 'What services does DevCheque offer?', 

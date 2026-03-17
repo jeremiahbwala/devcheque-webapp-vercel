@@ -147,15 +147,14 @@
 }
 
 
-/* Responsive */
-@media(max-width:768px){
-
-  .team-card{ 
-    min-width:280px; 
+/* Mobile: show ONE full card, no half-cards */
+@media (max-width: 768px) {
+  .team-card { 
+    min-width: calc(100vw - 80px);  /* full viewport minus arrow space */
+    max-width: calc(100vw - 80px);
   }
 
-  .team-section{
-    padding:40px 0; /* even easier scroll on mobile */
+  .team-section {
+    padding: 40px 0;
   }
-
 }
