@@ -76,29 +76,28 @@ img {
 =================================== */
 
 .hero-text {
-  font-weight: 700;
-  max-width: 800px;           /* keeps text from stretching too wide */
-  margin: 0 auto 20px auto;   /* center and add spacing below */
+  font-weight: 700;           
   text-align: center;
-  letter-spacing: 1px;        /* reduced for cleaner look */
-  line-height: 1.3;           /* tighter line spacing for neatness */
+  letter-spacing: 1px;       
+  line-height: 1.3;   
+  margin-top: 40px;
 }
 
 /* Buttons */
 .hero-btn1,
 .hero-btn2 {
-  font-size: 16px;            /* slightly smaller for balance */
+  font-size: 16px;            
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
   padding: 0.75rem 1.5rem;
-  margin: 0.5rem auto;        /* center buttons and spacing between them */
+  margin: 0.5rem auto;       
   display: inline-block;
 }
 
 /* Image wrapper */
 .hero-image-wrapper {
-  margin-top: 30px;           /* reduced spacing to pack things together */
+  margin-top: 30px;           
   display: flex;
   justify-content: center;
 }
