@@ -68,6 +68,13 @@ img {
 .navbar-cta {
   background-color: var(--color-success);
   border-radius: 999px;
+  color: white;
+  border: none;
+}
+
+.navbar-cta:hover {
+  background-color: #1a9a4a; 
+  color: white;              
 }
 
 
@@ -75,60 +82,70 @@ img {
    6. HERO SECTION
 =================================== */
 
-.hero-text {
-  font-weight: 700;           
-  text-align: center;
-  letter-spacing: 1px;       
-  line-height: 1.3;   
-  margin-top: 40px;
-}
-
-/* Buttons */
-.hero-btn1,
-.hero-btn2 {
-  font-size: 16px;            
+.hero-btn1 {
+  background-color: var(--color-success);
+  font-size: 18px;
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
-  padding: 0.75rem 1.5rem;
-  margin: 0.5rem auto;       
-  display: inline-block;
+  display: block;
+  box-shadow: 0 4px 15px rgba(32, 177, 90, 0.4);
 }
 
-/* Image wrapper */
+.hero-btn2 {
+  background-color: #e6f7ef;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
 .hero-image-wrapper {
-  margin-top: 30px;           
+  margin-top: -10px;          /* brings image closer to CTA */
   display: flex;
   justify-content: center;
 }
 
 .hero-image {
-  width: clamp(280px, 45vw, 600px); /* slightly smaller max width */
-  height: auto;                     /* keeps aspect ratio */
+  width: clamp(280px, 45vw, 800px);
+  height: 300px;
 }
 
-/* Responsive text sizes */
+
+
+
+.hero-text {
+  letter-spacing: 2px;
+  font-weight: 700;
+  max-width: 100%;
+  text-align: center;
+}
+
 /* Desktop */
 @media (min-width: 992px) {
   .hero-text {
-    font-size: 36px;          /* reduced from 40px */
+    font-size: 40px;
   }
 }
 
 /* Tablet */
 @media (max-width: 991px) {
   .hero-text {
-    font-size: 28px;          /* reduced from 32px */
+    font-size: 32px;
   }
 }
 
 /* Mobile */
 @media (max-width: 576px) {
   .hero-text {
-    font-size: 22px;          /* reduced from 24px */
-    letter-spacing: 0.5px;    /* tighter for small screens */
+    font-size: 24px;
+    letter-spacing: 1px;
   }
 }
+
+
 /* ===================================
    7. STATS SECTION
 =================================== */

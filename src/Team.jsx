@@ -76,7 +76,7 @@ function Team() {
     }
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(teamMembers.length * 2);
+  const [currentIndex, setCurrentIndex] = useState(teamMembers.length * 2 + 1);
 
   const CARD_WIDTH = 320;
 

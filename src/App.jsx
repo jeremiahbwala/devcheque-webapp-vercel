@@ -14,7 +14,7 @@ function DevChequeWebsite() {
   return (
     <div>
       {/* Navigation */}
-      <nav className="navbar navbar-expand-lg bg-white shadow-sm py-3 fixed-top">
+      <nav className="navbar navbar-expand-lg bg-white shadow-sm py-3">
         <div className="container-fluid px-4">
           <div className="d-flex justify-content-between align-items-center w-100">
             
@@ -25,10 +25,10 @@ function DevChequeWebsite() {
 
             {/* Desktop Menu */}
             <div className="d-none d-lg-flex gap-4 align-items-center mx-auto font-archivo">
-              <a href="#about" className="text-center text-dark text-decoration-none fw-bold fs-5 font-archivo">About us</a>
-              <a href="#projects" className="text-center text-dark text-decoration-none fw-bold fs-5 font-archivo">Projects</a>
-              <a href="#services" className="text-center text-dark text-decoration-none fw-bold fs-5 font-archivo">Services</a>
-              <a href="#work" className="text-center text-dark text-decoration-none fw-bold fs-5 font-archivo">How we work</a>
+              <a href="#about" className="text-dark text-decoration-none fw-bold fs-5 font-archivo">About us</a>
+              <a href="#projects" className="text-dark text-decoration-none fw-bold fs-5 font-archivo">Projects</a>
+              <a href="#services" className="text-dark text-decoration-none fw-bold fs-5 font-archivo">Services</a>
+              <a href="#work" className="text-dark text-decoration-none fw-bold fs-5 font-archivo">How we work</a>
             </div>
 
             {/* CTA Button Desktop */}
@@ -64,7 +64,7 @@ function DevChequeWebsite() {
 
       {/* Hero Section */}
       <section 
-        className="position-relative overflow-hidden"
+        className="mt-1 position-relative overflow-hidden"
         style={{ 
           backgroundImage: `url('${backgroundImage}')`,
           backgroundSize: 'cover',
@@ -73,7 +73,7 @@ function DevChequeWebsite() {
           paddingTop: '100px',
         }}
       >
-        <div className="container position-relative">
+        <div className="container position-relative mt-0">
           <div className="text-center text-white" style={{ maxWidth: '900px', margin: '0 auto' }}>
             {/* Tagline */}
             <p className='hero-text font-archivo'>
@@ -85,7 +85,7 @@ function DevChequeWebsite() {
               <span className="font-archivo">Get Your </span>
               <span className="font-archivo">Product Launched</span>
               <span className="font-archivo"> in </span>
-              <span className="font-archivo">Weeks</span>
+              <span className="font-archivo">Weeeks</span>
             </h1>
 
             {/* Description */}
@@ -95,9 +95,9 @@ function DevChequeWebsite() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+            <div className="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-5">
               <button 
-                className="btn hero-button hero-btn1 btn-lg px-5 bg-success rounded-pill d-inline-flex align-items-center justify-content-center"
+                className="btn hero-button hero-btn1 btn-lg px-5 rounded-pill d-inline-flex align-items-center justify-content-center"
                 style={{ fontSize: '16px',  fontWeight: '500' }}
               >
                 <a href="#contactForm" className='text-white text-decoration-none font-archivo'>Start Your Project</a>
@@ -114,11 +114,9 @@ function DevChequeWebsite() {
           </div>
         </div>
         <div className="hero-image-wrapper">
-         <img src={heroImage} alt="Hero" className="hero-image" />
+          <img src={heroImage} alt="Hero" className="hero-image" />
         </div>
-
       </section>
-
 
       {/* Stats Section */}
       <section className="stat-section">

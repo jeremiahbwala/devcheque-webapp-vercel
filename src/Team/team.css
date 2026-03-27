@@ -6,7 +6,7 @@
 .about-text { font-size: 16px; line-height: 1.8; margin-bottom: 24px; color: #333; }
 .about-image-wrapper { border-radius: 20px; overflow: hidden; height: 500px; }
 .about-image { width: 100%; height: 100%; object-fit: cover; }
-.start-project-btn { display: inline-block; background: #2e7d32; color: #fff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+.start-project-btn { display: inline-block; background: #2e7d32; color: #fff; padding: 4px 16px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; }
 .start-project-btn:hover { background: #1b5e20; }
 
 /* Responsive */
@@ -21,7 +21,7 @@
   .about-title{font-size:2rem;}
   .about-text{font-size:14px; line-height:1.6;}
   .about-image-wrapper{height:250px;}
-  .start-project-btn{padding:12px 24px; font-size:14px;}
+  .start-project-btn{padding:4px 16px; font-size:14px;}
 }
 
 
@@ -70,20 +70,24 @@
   display: flex; 
   gap: 20px; 
   transition: transform 0.5s ease-in-out; 
+  padding: 10px 5px; 
 }
 
 .team-card { 
-  min-width: 340px; 
-  background:#fff; 
-  border-radius:16px; 
-  box-shadow:0 10px 25px rgba(0,0,0,0.08); 
-  overflow:hidden; 
+  min-width: 300px;
+  max-width: 300px;
+  background: #fff; 
+  border-radius: 16px; 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+  overflow: hidden; 
+  flex-shrink: 0;
 }
 
 .team-card img { 
-  width:100%; 
-  height:260px; 
-  object-fit:contain; 
+  width: 100%; 
+  height: 220px; 
+  object-fit: cover;
+  object-position: center; 
 }
 
 .card-content { 
@@ -147,11 +151,11 @@
 }
 
 
-/* Mobile: show ONE full card, no half-cards */
+
 @media (max-width: 768px) {
   .team-card { 
-    min-width: calc(100vw - 80px);  /* full viewport minus arrow space */
-    max-width: calc(100vw - 80px);
+    min-width: calc(100vw - 100px); 
+    max-width: calc(100vw - 100px);
   }
 
   .team-section {
